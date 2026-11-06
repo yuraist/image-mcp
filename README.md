@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/banner.jpg" alt="Gemini Image MCP" width="100%">
+  <img src="assets/banner.jpg" alt="Image Tools MCP" width="100%">
 </p>
 
-# MCP Gemini Image — Image Generation for Claude Code
+# MCP Image Tools — Image Generation for Claude Code
 
 MCP server for generating and editing images via Google Gemini API.
 Works as a Claude Code plugin — the agent gets tools for creating illustrations directly in the project context.
@@ -25,7 +25,7 @@ Works as a Claude Code plugin — the agent gets tools for creating illustration
 ### 1. Clone / copy the project
 
 ```bash
-cd ~/Developer/gemini-mcp
+cd ~/Developer/image-mcp
 ```
 
 ### 2. Install dependencies and build
@@ -44,9 +44,9 @@ npm run build
 ### 4. Connect to Claude Code
 
 ```bash
-claude mcp add gemini-image \
+claude mcp add image-tools \
   --scope user \
-  -- node ~/Developer/gemini-mcp/build/index.js
+  -- node ~/Developer/image-mcp/build/index.js
 ```
 
 Then add the API key to the config. Open `~/.claude.json` and add env to the server configuration:
@@ -54,13 +54,13 @@ Then add the API key to the config. Open `~/.claude.json` and add env to the ser
 ```json
 {
   "mcpServers": {
-    "gemini-image": {
+    "image-tools": {
       "type": "stdio",
       "command": "node",
-      "args": ["/Users/yuraist/Developer/gemini-mcp/build/index.js"],
+      "args": ["/Users/yuraist/Developer/image-mcp/build/index.js"],
       "env": {
         "GEMINI_API_KEY": "AIza...",
-        "IMAGE_OUTPUT_DIR": "/Users/yuraist/Developer/gemini-mcp/output"
+        "IMAGE_OUTPUT_DIR": "/Users/yuraist/Developer/image-mcp/output"
       }
     }
   }

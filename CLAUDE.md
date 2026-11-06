@@ -1,4 +1,4 @@
-# Gemini Image MCP Server
+# Image Tools MCP Server
 
 ## Language
 

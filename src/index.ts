@@ -43,7 +43,7 @@ function makeFilename(prefix: string): string {
 
 // --- MCP Server ---
 const server = new McpServer({
-  name: "gemini-image",
+  name: "image-tools",
   version: "1.0.0",
 });
 
@@ -354,7 +354,7 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("Gemini Image MCP Server running on stdio");
+  console.error("Image Tools MCP Server running on stdio");
 }
 
 main().catch((error) => {
